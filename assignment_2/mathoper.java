@@ -1,16 +1,30 @@
 // 8. write a java program to accept two numbers using command line arguement and claculate addition, substraction, multiplication and dividion
 
 public class mathoper {
-    public static void main(String args[]){
+    public static void main(String args[]) {
         int a = Integer.parseInt(args[0]);
         int b = Integer.parseInt(args[1]);
+        int c = Integer.parseInt(args[2]);
         int sum = a + b;
         int multi = a * b;
         int minus = a - b;
         int div = a / b;
-        System.out.println("the sum of " + a + " and " + b + " is " + sum);
-        System.out.println("the multiplication of " + a + " and " + b + "is " + multi);
-        System.out.println(a + " divided by  " + b + " is " + div);
-        System.out.println(a + " munus " + b + " is " + minus);
+        switch (c) {
+            case 1:
+                System.out.println("the sum of " + a + " and " + b + " is " + sum);
+                break;
+            case 2:
+                System.out.println("the multiplication of " + a + " and " + b + "is " + multi);
+                break;
+            case 3:
+                System.out.println(a + " divided by  " + b + " is " + div);
+                break;
+            case 4:
+                System.out.println(a + " munus " + b + " is " + minus);
+                break;
+            default:
+                System.out.println("please enter a valid input ¯\\_(ツ)_/¯");
+                break;
+        }
     }
 }
